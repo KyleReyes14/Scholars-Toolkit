@@ -247,6 +247,11 @@ body {
     margin-bottom: 2.5rem;
 }
 
+.toolkit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(255, 204, 51, 0.25);
+}
+
 .explore-btn {
     display: inline-block;
     background-color: red;

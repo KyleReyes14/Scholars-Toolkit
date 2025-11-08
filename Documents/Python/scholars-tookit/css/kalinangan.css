@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Mont', sans-serif, Arial;
-    background: linear-gradient(180deg, #2f2f2f 0%, #242424 100%);
+    background: var(--bgcolor);
     color: var(--textcolor);
 }
 
@@ -71,10 +71,11 @@ body {
     -moz-box-shadow: -5px -1px 43px -16px rgba(255,234,128,0.24);
 }
 
-.isko-section {
+.kalinangan-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    align-items: space-evenly;
     gap: 4rem;
     padding: 4rem 6%;
     flex-wrap: wrap;
@@ -83,11 +84,14 @@ body {
 .toolkit-cards {
     flex: 1.2;
     display: flex;
-    flex-direction: column;
-    gap: 2.3rem;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .toolkit-card {
+    flex: 1 1 100%;
+    max-width: 320px;
     background-color: #1f1f1f;
     padding: 2.5rem;
     border-radius: 20px;
@@ -140,32 +144,36 @@ body {
     letter-spacing: 0.3px;
 }
 
-.isko-info {
-    flex: 0.9;
+.kalinangan-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 1.4rem 2rem;
 }
 
-.isko-info h2 {
-    font-size: 2.5rem;
+.kalinangan-info h2 {
+    font-size: 2rem;
     font-weight: 900;
     color: white;
     margin-bottom: 1rem;
     letter-spacing: 1px;
+    text-align: center;
 }
 
-.isko-info p {
+.kalinangan-info p {
     color: var(--accentcolor);
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 420px;
-    margin: 0 auto;
+    max-width: 800px; 
+    margin: 0 auto;  
+    text-align: center;
+    padding: 0 1rem; 
 }
 
 @media (max-width: 992px) {
-    .isko-section {
+    .kalinangan-section {
     flex-direction: column;
     text-align: center;
     }
@@ -180,7 +188,63 @@ body {
     max-width: 550px;
     }
 
-    .isko-info {
+    .kalinangan-info {
     margin-top: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .kalinangan-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .kalinangan-info p {
+        font-size: 0.9rem;
+        max-width: 260px;
+    }
+
+    .toolkit-cards {
+        gap: 1rem;
+    }
+
+    .toolkit-card {
+        padding: 1.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .kalinangan-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .kalinangan-info p {
+        font-size: 0.85rem;
+        max-width: 220px;
+    }
+
+    .toolkit-card {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .explore-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .right-header ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .right-header ul li:last-child a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.85rem;
     }
 }
